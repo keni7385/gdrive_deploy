@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 import os
 
 
@@ -13,7 +13,7 @@ def read(fname):
 setup(
     name='gdrive_deploy',
     version='1.0',
-    packages=['gdrive_deploy'],
+    packages=find_packages(),
     url='https://www.github.com/keni7385/gdrive-deploy',
     license='MIT',
     author='keni7385',
@@ -21,5 +21,15 @@ setup(
     description='Tiny utility to deploy file by name to google drive',
     long_description=read('README.md'),
     long_description_content_type="text/markdown",
-    install_requires=['googleapiclient', 'httplib2', 'google-api-python-client']
+    install_requires=['googleapiclient', 'httplib2', 'google-api-python-client'],
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Intended Audience :: System Administrators',
+        'License :: OSI Approved :: MIT License',
+        'Topic :: System :: Installation/Setup'
+    ],
+    project_urls={
+        'Source': 'https://github.com/keni7385/gdrive_deploy',
+        'Tracker': 'https://github.com/pypa/gdrive_deploy/issues',
+    },
 )
