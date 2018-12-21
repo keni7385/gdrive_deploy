@@ -12,7 +12,7 @@ def read(fname):
 
 setup(
     name='gdrive_deploy',
-    version='1.0.1',
+    version='1.0.2',
     packages=find_packages(),
     url='https://www.github.com/keni7385/gdrive-deploy',
     license='MIT',
@@ -32,4 +32,9 @@ setup(
         'Source': 'https://github.com/keni7385/gdrive_deploy',
         'Tracker': 'https://github.com/pypa/gdrive_deploy/issues',
     },
+    entry_points={
+        'console_scripts': [
+            'gdrive-deploy = gdrive_deploy.__main__:main'
+        ]
+    }
 )
