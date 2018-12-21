@@ -12,7 +12,7 @@ def read(fname):
 
 setup(
     name='gdrive_deploy',
-    version='1.0',
+    version='1.0.1',
     packages=find_packages(),
     url='https://www.github.com/keni7385/gdrive-deploy',
     license='MIT',
@@ -21,7 +21,7 @@ setup(
     description='Tiny utility to deploy file by name to google drive',
     long_description=read('README.md'),
     long_description_content_type="text/markdown",
-    install_requires=['googleapiclient', 'httplib2', 'google-api-python-client'],
+    install_requires=['google-api-python-client', 'httplib2', 'oauth2client'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: System Administrators',
